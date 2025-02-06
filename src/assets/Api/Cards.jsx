@@ -1,5 +1,6 @@
+import { NavLink } from "react-router-dom";
 export const Cards = ({ watchMovie }) => {
-  const { Poster, Title } = watchMovie;
+  const { Poster, Title, imdbID } = watchMovie;
   return (
     <div className="">
       <img
@@ -7,9 +8,11 @@ export const Cards = ({ watchMovie }) => {
         alt={Title}
         className="rounded-md bg-cover bg-center w-full h-96 mt-2"
       />
-      <button className="mt-3 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg w-full ">
-        Watch Movie
-      </button>
+      <NavLink to={`/movies/${imdbID}`}>
+        <button className="mt-3 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg w-full ">
+          Watch Movie
+        </button>
+      </NavLink>
     </div>
   );
 };

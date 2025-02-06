@@ -11,6 +11,8 @@ import { Apploader } from "./Components/Apploader";
 import { About } from "./assets/Pages/About";
 import { Errorhandling } from "./Components/ErrorHandling";
 import { Apifetch } from "./assets/Api/MoviesApi";
+import { MovieDetail } from "./assets/Api/MovieDetailBtn";
+import { Getmoviedetails } from "./assets/Api/Getmoviedetails";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -31,6 +33,11 @@ const App = () => {
           path: "/movies",
           element: <Movies />,
           loader: Apifetch,
+        },
+        {
+          path: "/movies/:movieid", // id details
+          element: <MovieDetail />, // shows the id details
+          loader: Getmoviedetails, //get specific id movie details
         },
         {
           path: "/about",
