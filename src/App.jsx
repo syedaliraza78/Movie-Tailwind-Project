@@ -13,6 +13,7 @@ import { Errorhandling } from "./Components/ErrorHandling";
 import { Apifetch } from "./assets/Api/MoviesApi";
 import { MovieDetail } from "./assets/Api/MovieDetailBtn";
 import { Getmoviedetails } from "./assets/Api/Getmoviedetails";
+import { GetFormData } from "./assets/Pages/Contact";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ const App = () => {
         {
           path: "/contact",
           element: <Contact />,
+          action: GetFormData,
         },
         {
           path: "/movies",
