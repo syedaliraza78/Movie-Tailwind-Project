@@ -15,6 +15,7 @@ import { MovieDetail } from "./assets/Api/MovieDetailBtn";
 import { Getmoviedetails } from "./assets/Api/Getmoviedetails";
 import { GetFormData } from "./assets/Pages/Contact";
 import { FetchAxios } from "./assets/Api/FetchdataAxios";
+import { GetApiData } from "./Components/CRUD Operation/GetApiData";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -45,7 +46,7 @@ const App = () => {
         },
         {
           path: "/about",
-          element: <About />,
+          element: <GetApiData />,
         },
       ],
     },

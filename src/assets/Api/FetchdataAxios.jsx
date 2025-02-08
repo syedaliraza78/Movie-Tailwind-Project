@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
-
+import { useState } from "react";
 export const FetchAxios = () => {
   //store the api data into the state
   const [apiData, setApidata] = useState([]);
