@@ -14,6 +14,7 @@ import { Apifetch } from "./assets/Api/MoviesApi";
 import { MovieDetail } from "./assets/Api/MovieDetailBtn";
 import { Getmoviedetails } from "./assets/Api/Getmoviedetails";
 import { GetFormData } from "./assets/Pages/Contact";
+import { FetchAxios } from "./assets/Api/FetchdataAxios";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -24,7 +25,8 @@ const App = () => {
       children: [
         {
           path: "/home",
-          element: <Home />,
+          // element: <Home />,
+          element: <FetchAxios />,
         },
         {
           path: "/contact",
