@@ -5,6 +5,7 @@ import CardCrud from "./CardCrud"; // Import the Card component
 export const GetApiData = () => {
   const [apiData, setApiData] = useState([]);
 
+  // Fetch API data
   const Getdata = async () => {
     try {
       const response = await GetMethod();
@@ -14,7 +15,9 @@ export const GetApiData = () => {
       console.error("Error fetching data:", error);
     }
   };
-
+  const handleDelete = (id) => {
+    setApiData(apiData.filter((ele) => ele.id !== id));
+  };
   useEffect(() => {
     Getdata();
   }, []); // Empty dependency array to call it only once
@@ -27,7 +30,7 @@ export const GetApiData = () => {
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {apiData.map((currele) => (
           <li key={currele.id} className="h-full">
-            <CardCrud ApiCardData={currele} />
+            <CardCrud ApiCardData={currele} onDelete={handleDelete} />
           </li>
         ))}
       </ul>
