@@ -22,7 +22,7 @@ const CardCrud = ({ ApiCardData, onDelete }) => {
     <div className="bg-white shadow-lg rounded-lg p-5 m-4 border border-gray-200 h-[400px] flex flex-col">
       <span className="text-sm text-gray-500 block">ID: {id}</span>
       <h2 className="text-xl font-semibold text-gray-800 mb-2 line-clamp-2 min-h-[60px]">
-        {title.split(" ").slice(0, 10).join(" ")}{" "}
+        {title.split(" ").slice(0, 9).join(" ")}{" "}
         {/* Show only first 10 words */}
       </h2>
       <p className="text-gray-600 flex-1 overflow-y-auto p-4 border border-gray-200 rounded-md max-h-[150px]">

@@ -13,3 +13,8 @@ export const GetMethod = () => {
 export const DeleteMethod = (id) => {
   return API.delete(`/posts/${id}`);
 };
+
+// add data into the api using form
+export const PostData = (postdata) => {
+  return API.post("/posts", postdata);
+};
