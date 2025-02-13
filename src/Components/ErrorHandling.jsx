@@ -20,7 +20,6 @@ export const Errorhandling = () => {
           Back To Home Page
         </NavLink>
       </button>
-      {/* button fro use naviagetion or redirect to back page */}
       <button
         onClick={HandleGoBack}
         className="bg-green-600 p-2 ml-20 text-lg rounded-lg"
