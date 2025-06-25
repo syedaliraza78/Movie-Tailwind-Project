@@ -1,6 +1,6 @@
-import { Contact } from "../assets/Pages/Contact";
+import { Contact } from "../../app/route/Contact";
 import { NavLink } from "react-router-dom";
-import { ActiveLink } from "./Activelink";
+import { ActiveLink } from "../error/Activelink"
 export const Header = () => {
   return (
     <div>

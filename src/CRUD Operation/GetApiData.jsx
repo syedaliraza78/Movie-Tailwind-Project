@@ -24,9 +24,6 @@ export const GetApiData = () => {
 
   return (
     <div className="container mx-auto p-4">
-      {/* <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
-        API Data
-      </h1> */}
       <PostDataToApi apiData={apiData} setApiData={setApiData} />
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {apiData.map((currele) => (

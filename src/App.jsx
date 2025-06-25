@@ -1,21 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./assets/Pages/Home";
-import { Contact } from "./assets/Pages/Contact";
-import { Movies } from "./assets/Pages/Movies";
-import { Thumbnail } from "./Components/thumbnail";
-import { Apploader } from "./Components/Apploader";
-import { About } from "./assets/Pages/About";
-import { Errorhandling } from "./Components/ErrorHandling";
-import { Apifetch } from "./assets/Api/MoviesApi";
-import { MovieDetail } from "./assets/Api/MovieDetailBtn";
-import { Getmoviedetails } from "./assets/Api/Getmoviedetails";
-import { GetFormData } from "./assets/Pages/Contact";
-import { FetchAxios } from "./assets/Api/FetchdataAxios";
-import { GetApiData } from "./Components/CRUD Operation/GetApiData";
+import { Home } from "./app/route/Home";
+import { Contact } from "./app/route/Contact";
+import { Movies } from "./app/route/Movies";
+// import { Thumbnail } from "./Components/thumbnail";
+import { Apploader } from "./Components/error/Apploader";
+import { Errorhandling } from ".././src/Components/error/ErrorHandling";
+import { Apifetch } from "../src/Api/MoviesApi";
+import { MovieDetail } from "./Components/ui/MovieDetailBtn";
+import { Getmoviedetails } from "./Api/Getmoviedetails";
+import { GetFormData } from "../src/app/route/Contact";
+import { FetchAxios } from ".//Api/FetchdataAxios";
+import { GetApiData } from "../src/CRUD Operation/GetApiData";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -55,7 +52,7 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
-      <Thumbnail />
+      {/* <Thumbnail /> */}
     </>
   );
 };

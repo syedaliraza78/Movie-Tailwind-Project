@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Movies } from "../assets/Pages/Movies";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { Footer } from "../../Components/ui/Footer";
+import { Header } from "../../Components/ui/Header";
 import { useNavigation } from "react-router-dom";
 export const Apploader = () => {
   {

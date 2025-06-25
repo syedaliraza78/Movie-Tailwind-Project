@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Cards } from "../Api/Cards";
+import { Cards } from "../../Components/ui/Cards";
 
 export const Movies = () => {
   const movies = useLoaderData();

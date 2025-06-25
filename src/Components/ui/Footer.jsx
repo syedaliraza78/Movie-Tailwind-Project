@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { ActiveLink } from "./Activelink";
+import { ActiveLink } from "../error/Activelink";
 export const Footer = () => {
   return (
     <div>
@@ -11,7 +11,7 @@ export const Footer = () => {
               MyLogo
             </NavLink>
             <p class="text-gray-400 text-sm mt-1">
-              © 2024 MyCompany. All rights reserved.
+              © 2025 Ali Raza. All rights reserved.
             </p>
           </div>
 
