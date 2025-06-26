@@ -23,8 +23,8 @@ const App = () => {
       children: [
         {
           path: "/home",
-          // element: <Home />,
-          element: <FetchAxios />,
+          element: <Home />,
+          // element: <FetchAxios />,
         },
         {
           path: "/contact",
@@ -53,6 +53,7 @@ const App = () => {
     <>
       <RouterProvider router={router} />
       {/* <Thumbnail /> */}
+     
     </>
   );
 };
