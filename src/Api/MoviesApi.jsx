@@ -6,7 +6,6 @@ export const Apifetch = async () => {
       }=titanic&page=1`
     );
     const data = await res.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error);

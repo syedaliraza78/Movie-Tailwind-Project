@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { FetchAxios } from '../../Api/FetchdataAxios';
-import { div } from 'framer-motion/client';
 
 const Home = () => {
   return(

@@ -3,9 +3,6 @@ import { Footer } from "../../Components/ui/Footer";
 import { Header } from "../../Components/ui/Header";
 import { useNavigation } from "react-router-dom";
 export const Apploader = () => {
-  {
-    /* here we can use the global loading state*/
-  }
   const navigate = useNavigation();
   if (navigate.state === "loading") {
     return (

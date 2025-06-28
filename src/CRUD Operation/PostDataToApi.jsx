@@ -17,20 +17,12 @@ export const PostDataToApi = ({ apiData, setApiData }) => {
       };
     });
   };
-  //   const AddpostData = async () => {
-  //     const response = await PostData(inputdata);
-  //     console.log(response);
-  //     if (response.status === 201) {
-  //       const [apiData, setApiData] = useState([]);
-  //       setApiData([...apiData, response.apiData]);
-  //     }
-  //   };
+
   const AddpostData = async () => {
     try {
       const response = await PostData(inputdata);
       console.log(response);
       if (response.status === 201) {
-        // Ensure apiData is updated correctly
         setApiData((prevData) => [...prevData, response.data]); // Append new post
       }
     } catch (error) {

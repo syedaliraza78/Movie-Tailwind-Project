@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { GetMethod } from "./PostApi";
-import CardCrud from "./CardCrud"; // Import the Card component
+import CardCrud from "./CardCrud"; 
 import { PostDataToApi } from "./PostDataToApi";
 export const GetApiData = () => {
   const [apiData, setApiData] = useState([]);
-
-  // Fetch API data
   const Getdata = async () => {
     try {
       const response = await GetMethod();
-      setApiData(response.data); // Save API data to state
+      setApiData(response.data); 
       console.log("Fetched Data: ", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -20,7 +18,7 @@ export const GetApiData = () => {
   };
   useEffect(() => {
     Getdata();
-  }, []); // Empty dependency array to call it only once
+  }, []); 
 
   return (
     <div className="container mx-auto p-4">

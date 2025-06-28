@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-export const Cards = ({ watchMovie }) => {
+export const MovieCards = ({ watchMovie }) => {
   const { Poster, Title, imdbID } = watchMovie;
   return (
     <div className="">
