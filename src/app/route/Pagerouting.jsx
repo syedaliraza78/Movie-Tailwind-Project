@@ -1,3 +1,5 @@
+/** @format */
+
 import { createBrowserRouter } from "react-router-dom";
 import { FetchAxios } from "../../Api/FetchdataAxios";
 import { Getmoviedetails } from "../../Api/Getmoviedetails";
@@ -10,45 +12,55 @@ import { Contact, ContactFormData } from "./Contact";
 import { Movies } from "./Movies";
 import SignIn from "../../auth/signin/signin";
 import SignUp from "../../auth/signup/signup";
+import ForgotPassword from "../../auth/forgotpassword/forgotpass";
+import VerifyOTP from "../../auth/verifyotp/verifyotp";
 const Router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Apploader />,
-      errorElement: <Errorhandling />,
-      children: [
-        {
-          path: "/home",
-          // element: <Home />,
-          element: <FetchAxios />,
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-          action: ContactFormData,
-        },
-        {
-          path: "/movies",
-          element: <Movies />,
-          loader: Apifetch,
-        },
-        {
-          path: "/movies/:movieid", 
-          element: <MovieDetail />,
-          loader: Getmoviedetails,
-        },
-        {
-          path: "/about",
-          element: <GetApiData />,
-        },
-        {
-          path:"/signin",
-          element:<SignIn/>
-        },
-        {
-          path:"/signup",
-          element:<SignUp/>
-        }
-      ],
-    },
-  ]);
-  export default Router
+  {
+    path: "/",
+    element: <Apploader />,
+    errorElement: <Errorhandling />,
+    children: [
+      {
+        path: "/home",
+        // element: <Home />,
+        element: <FetchAxios />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+        action: ContactFormData,
+      },
+      {
+        path: "/movies",
+        element: <Movies />,
+        loader: Apifetch,
+      },
+      {
+        path: "/movies/:movieid",
+        element: <MovieDetail />,
+        loader: Getmoviedetails,
+      },
+      {
+        path: "/about",
+        element: <GetApiData />,
+      },
+      {
+        path: "/signin",
+        element: <SignIn />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
+      },
+      {
+        path: "/forgotpassword",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "/verifyotp",
+        element: <VerifyOTP />,
+      },
+    ],
+  },
+]);
+export default Router;
