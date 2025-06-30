@@ -12,7 +12,6 @@ import { Contact, ContactFormData } from "./Contact";
 import { Movies } from "./Movies";
 import SignIn from "../../auth/signin/signin";
 import SignUp from "../../auth/signup/signup";
-import ForgotPassword from "../../auth/forgotpassword/forgotpass";
 import VerifyOTP from "../../auth/verifyotp/verifyotp";
 const Router = createBrowserRouter([
   {
@@ -51,10 +50,6 @@ const Router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
-      },
-      {
-        path: "/forgotpassword",
-        element: <ForgotPassword />,
       },
       {
         path: "/verifyotp",
